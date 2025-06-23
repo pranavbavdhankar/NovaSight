@@ -229,7 +229,7 @@ Check API health status.
 ### Frontend
 - **React** - User interface framework
 - **Axios** - HTTP client
-- **Bootstrap** - CSS framework
+- **tailwind** - CSS framework
 - **React-Dropzone** - File upload component
 
 ### Data & Training
@@ -237,7 +237,7 @@ Check API health status.
 - **Roboflow** - Dataset management
 - **Ultralytics** - YOLOv8 implementation
 
-## 🌟 Bonus Features
+## 🌟 Features
 
 - **📊 Real-time Analytics Dashboard**: Monitor detection performance
 - **🔄 Batch Processing**: Process multiple images simultaneously  
@@ -245,13 +245,6 @@ Check API health status.
 - **🎨 Interactive Visualizations**: Hover effects and detailed tooltips
 - **💾 Export Functionality**: Download results in multiple formats
 
-## 🏆 Hackathon Achievements
-
-- ✅ **Synthetic Data Mastery**: 100% synthetic training data
-- ✅ **Real-time Performance**: Sub-second inference times
-- ✅ **Professional UI/UX**: Production-ready interface
-- ✅ **Comprehensive Documentation**: Complete setup guides
-- ✅ **Scalable Architecture**: Ready for production deployment
 
 ## 🚀 Future Enhancements
 
@@ -260,14 +253,6 @@ Check API health status.
 - **🤖 Model Optimization**: Edge deployment for space hardware
 - **📊 Advanced Analytics**: Detailed usage and performance metrics
 - **🔒 Security Features**: Authentication and access control
-
-## 👥 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
 
 ## 📄 License
 
