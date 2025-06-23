@@ -33,9 +33,7 @@ NovaSight/
 │   ├── train/
 │   └── val/
 ├── 📁 data/              # Synthetic dataset
-├── train.py              # Model training script
 ├── config.yaml           # YOLOv8 configuration
-├── requirements.txt      # Python dependencies
 └── README.md            # Project documentation
 ```
 
@@ -105,25 +103,38 @@ The frontend will be available at `http://localhost:3000`
 
 ## 📊 Model Performance
 
-Our YOLOv8 model achieved impressive results on the synthetic test dataset:
+Our YOLOv8 model achieved excellent results after 100 epochs of training on synthetic data:
 
 | Metric | Score |
 |--------|-------|
-| **mAP@0.5** | 89.2% |
-| **mAP@0.5:0.95** | 76.8% |
-| **Precision** | 87.5% |
-| **Recall** | 84.3% |
-| **F1-Score** | 85.9% |
+| **mAP@0.5** | 94.4% |
+| **mAP@0.5:0.95** | 88.6% |
+| **Precision** | 98.4% |
+| **Recall** | 91.3% |
+| **F1-Score** | 94.7% |
 
-### Class-wise Performance
+### Training Performance Summary
 
-| Object | Precision | Recall | mAP@0.5 |
-|--------|-----------|---------|---------|
-| Toolbox | 91.2% | 88.7% | 92.1% |
-| Fire Extinguisher | 89.8% | 85.4% | 88.9% |
-| Oxygen Tank | 81.5% | 78.8% | 86.7% |
+| Phase | Box Loss | Classification Loss | DFL Loss | Training Time |
+|-------|----------|-------------------|----------|---------------|
+| **Initial (Epoch 1)** | 0.981 | 1.871 | 1.172 | 52.7 hours |
+| **Final (Epoch 100)** | 0.259 | 0.200 | 0.786 | |
+| **Improvement** | -73.6% | -89.3% | -32.8% | |
 
-*Detailed confusion matrices and training curves available in `/runs/train/`*
+### Validation Metrics Progress
+
+- **Precision**: Improved from 84.7% → 98.4% (+13.7%)
+- **Recall**: Improved from 64.0% → 91.3% (+27.3%)  
+- **mAP@0.5**: Improved from 79.0% → 94.4% (+15.4%)
+- **mAP@0.5:0.95**: Improved from 58.7% → 88.6% (+29.9%)
+
+### Training Highlights
+
+✅ **Exceptional Convergence**: Model achieved 98.4% precision with excellent loss reduction  
+✅ **High Recall Performance**: 91.3% recall ensures minimal missed detections  
+✅ **Outstanding mAP Scores**: 94.4% mAP@0.5 demonstrates superior object localization  
+✅ **Stable Training**: Consistent improvement across all metrics over 100 epochs  
+✅ **Synthetic Data Success**: Proves effectiveness of Falcon-generated training data
 
 ## 🔧 Configuration
 
@@ -162,17 +173,19 @@ MAX_CONTENT_LENGTH=16777216
 ## 🧪 Training Your Own Model
 
 ```bash
-# Train with custom parameters
+# Train with custom parameters (100 epochs used for final model)
 python train.py --epochs 100 --batch-size 16 --imgsz 640
 
 # Resume training from checkpoint
 python train.py --resume runs/train/exp/weights/last.pt
 
-# Train with different model size
+# Train with different model sizes
 python train.py --model yolov8n.pt  # nano
-python train.py --model yolov8s.pt  # small
+python train.py --model yolov8s.pt  # small  
 python train.py --model yolov8m.pt  # medium
 ```
+
+*Note: Final model was trained for 100 epochs achieving 94.4% mAP@0.5*
 
 ## 📦 API Reference
 
