@@ -1,0 +1,5 @@
+path: HackByte_Dataset/data
+train: train/images
+val: val/images
+nc: 3
+names: ['Fire Extinguisher', 'Toolbox', 'Oxygen Tank']
