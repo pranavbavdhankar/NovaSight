@@ -8,9 +8,9 @@
 NovaSight is a cutting-edge AI solution developed for the **[Duality AI Space Station Hackathon](https://www.duality.ai/edu)**. This full-stack application combines Flask backend with React frontend to deliver real-time object detection in space station environments using synthetic data from Falcon's digital twin platform.
 
 **Live Demo Screenshots:**
-![Image 1](./assets/1.png)
-![Image 2](./assets/2.png)
-![Image 3](./assets/3.png)
+![Image 1](/assets/1.png)
+![Image 2](/assets/2.png)
+![Image 3](/assets/3.png)
 
 
 
