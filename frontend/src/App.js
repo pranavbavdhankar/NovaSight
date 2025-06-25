@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Upload, Camera, Zap, AlertCircle, CheckCircle } from 'lucide-react';
-
+import config from "./config.js"
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [detectionResults, setDetectionResults] = useState(null);
@@ -18,7 +18,7 @@ function App() {
 
   const checkBackendHealth = async () => {
     try {
-      const response = await fetch('http://localhost:5000/health');
+      const response = await fetch(`${config.backendUrl}/health`);
       if (response.ok) {
         setBackendStatus('healthy');
       } else {
@@ -65,7 +65,7 @@ function App() {
       formData.append('image', selectedImage);
       formData.append('confidence', confidence.toString());
 
-      const response = await fetch('http://localhost:5000/detect', {
+      const response = await fetch(`${config.backendUrl}/detect`, {
         method: 'POST',
         body: formData
       });
