@@ -1,5 +1,5 @@
 const config = {
-  backendUrl: "https://novasight.onrender.com/",
+  backendUrl: "https://novasight.onrender.com",
 };
 
 export default config;
