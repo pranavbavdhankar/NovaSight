@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Configuration
-MODEL_PATH = '../best.pt'  # Path to your YOLOv11 model
+MODEL_PATH = os.path.join(os.path.dirname(__file__), 'best.pt') # Path to YOLOv8 model
 UPLOAD_FOLDER = 'uploads'
 RESULTS_FOLDER = 'results'
 MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
